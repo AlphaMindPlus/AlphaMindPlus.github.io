@@ -3,96 +3,92 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AlphaMindPlus — Smart Minds. Intelligent Solutions. Better Futures.</title>
-  <meta name="description" content="AlphaMindPlus — European fintech & technology. AI, cloud, cybersecurity, and digital transformation." />
+  <title>AlphaMindPlus — Intelligent Finance & Technology</title>
+  <meta name="description" content="AlphaMindPlus is a premium European fintech studio delivering AI, cloud, and secure digital transformation." />
   <meta property="og:title" content="AlphaMindPlus — Intelligent Finance & Technology" />
-  <meta property="og:description" content="AI-powered fintech, cloud infrastructure, cybersecurity, and digital transformation." />
+  <meta property="og:description" content="Premium fintech and AI solutions for European enterprise customers." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://AlphaMindPlus.github.io" />
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/images/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <meta name="theme-color" content="#0b1020" />
+  <meta name="theme-color" content="#0B1020" />
 </head>
-<body class="dark">
+<body class="theme-dark">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div id="loader" class="loader">Loading…</div>
+
   <header class="nav sticky" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
       <a class="brand" href="/index.html">
-        <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="g" x1="0" x2="1">
-              <stop offset="0" stop-color="#4cc6ff"/>
-              <stop offset="1" stop-color="#9b5cff"/>
-            </linearGradient>
-          </defs>
-          <rect width="100" height="100" rx="20" fill="url(#g)" />
-          <text x="50" y="57" font-family="Arial" font-size="46" fill="#071027" text-anchor="middle">A+</text>
-        </svg>
+        <img src="/assets/images/logo.png" alt="AlphaMindPlus logo" class="brand-logo" loading="lazy" />
         <span class="brand-text">AlphaMindPlus</span>
       </a>
-      <nav class="nav-links" aria-label="Primary">
+      <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
         <a href="/about.html">About</a>
-        <a href="/index.html#services">Services</a>
+        <a href="#services">Services</a>
         <a href="/careers.html">Careers</a>
-        <a href="/index.html#contact">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <div class="nav-ctas">
-        <a class="btn ghost" href="/index.html#services">Explore Services</a>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" type="button">Light mode</button>
+        <a class="btn ghost" href="#services">Explore Services</a>
         <a class="btn primary" href="/careers.html">Join Our Team</a>
       </div>
-      <button id="mobileToggle" class="mobile-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open menu">☰</button>
+      <button id="mobileToggle" class="mobile-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open menu" type="button">☰</button>
     </div>
   </header>
 
   <main id="main-content">
     <section id="hero" class="hero">
-      <canvas id="particles" class="particles" aria-hidden="true"></canvas>
+      <div class="hero-backdrop"></div>
+      <div class="hero-glow"></div>
       <div class="container hero-inner">
-        <div class="hero-content">
-          <h1 class="hero-slogan">Building the Future of Intelligent Finance & Technology</h1>
-          <p class="hero-lead">AlphaMindPlus blends artificial intelligence, cloud computing, and secure fintech to accelerate digital transformation across Europe.</p>
-          <div class="hero-ctas">
-            <a href="#services" class="btn large primary">Explore Services</a>
-            <a href="/careers.html" class="btn large ghost">Join Our Team</a>
+        <div class="hero-copy reveal">
+          <span class="eyebrow">European fintech · AI · Cloud</span>
+          <h1>Building the Future of Intelligent Finance & Technology</h1>
+          <p>AlphaMindPlus blends artificial intelligence, cloud computing, and secure fintech to accelerate digital transformation across Europe.</p>
+          <div class="hero-actions">
+            <a class="btn primary large" href="#services">Explore Services</a>
+            <a class="btn ghost large" href="/careers.html">Join Our Team</a>
           </div>
+          <div class="hero-pillboard">Trusted by ambitious finance teams across Europe</div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <svg viewBox="0 0 600 400" class="hero-illustration" role="img" aria-hidden="true">
-            <defs>
-              <linearGradient id="hg" x1="0" x2="1"><stop offset="0" stop-color="#071027"/><stop offset="1" stop-color="#0b1730"/></linearGradient>
-            </defs>
-            <rect width="100%" height="100%" rx="18" fill="url(#hg)" opacity="0.6" />
-            <g fill="none" stroke="#4cc6ff" stroke-opacity="0.08">
-              <circle cx="100" cy="80" r="60"/>
-              <circle cx="260" cy="180" r="90"/>
-              <circle cx="420" cy="120" r="70"/>
-            </g>
-          </svg>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="hero-panel">
+            <img src="/assets/images/image1.png" alt="AI finance dashboard" loading="lazy" />
+            <div class="panel-content">
+              <div class="panel-pill">Secure enterprise intelligence</div>
+              <p>Premium data-driven UX for modern financial operations.</p>
+            </div>
+          </div>
+          <div class="hero-tag-grid">
+            <img src="/assets/images/image2.png" alt="Cloud platform experience" loading="lazy" />
+            <img src="/assets/images/image3.png" alt="Fintech workflow interface" loading="lazy" />
+            <img src="/assets/images/image4.png" alt="Data analytics visuals" loading="lazy" />
+          </div>
         </div>
       </div>
     </section>
 
     <section id="about" class="section about">
       <div class="container">
-        <div class="split">
-          <div>
-            <h2>About AlphaMindPlus</h2>
-            <p>We are a European fintech and technology company focused on AI, cloud computing, secure financial platforms and intelligent automation. Our mission is to help organisations modernize core systems and unlock new value through responsible AI and scalable cloud architecture.</p>
-            <ul class="stats">
-              <li><strong class="num" data-target="98">0</strong>% Uptime Reliability</li>
-              <li><strong class="num" data-target="140">0</strong>k Transactions/sec (peak)</li>
-              <li><strong class="num" data-target="250">0</strong> Projects Delivered</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Our Vision</h3>
-            <p>European innovation, secure systems, and AI that empowers businesses to build better futures.</p>
-            <div class="timeline">
-              <div class="event"><span class="year">2021</span><p>Founded with core team in EU</p></div>
-              <div class="event"><span class="year">2022</span><p>Launched first AI-fintech product</p></div>
-              <div class="event"><span class="year">2024</span><p>Scaled cloud-native platform</p></div>
+        <div class="section-head reveal">
+          <span class="eyebrow">Our mission</span>
+          <h2>Driving secure, intelligent finance for the next generation of European businesses.</h2>
+        </div>
+        <div class="about-grid reveal">
+          <div class="about-copy">
+            <p>We design future-ready fintech products, cloud architecture and AI systems that offer enterprise-grade trust, performance, and compliance. Every solution is built for scale, privacy, and measurable business outcomes.</p>
+            <div class="stats-grid">
+              <div class="stat-card"><strong class="num" data-target="98">0</strong><span>Uptime reliability</span></div>
+              <div class="stat-card"><strong class="num" data-target="140">0</strong><span>k Transactions/sec</span></div>
+              <div class="stat-card"><strong class="num" data-target="250">0</strong><span>Projects delivered</span></div>
             </div>
+          </div>
+          <div class="about-media">
+            <div class="media-card"><img src="/assets/images/image5.png" alt="Analytics workspace" loading="lazy" /></div>
+            <div class="media-card small"><img src="/assets/images/image6.png" alt="Secure fintech interface" loading="lazy" /></div>
+            <div class="media-card small"><img src="/assets/images/image7.png" alt="Technology team collaboration" loading="lazy" /></div>
           </div>
         </div>
       </div>
@@ -100,87 +96,101 @@
 
     <section id="services" class="section services">
       <div class="container">
-        <h2>Our Services</h2>
-        <div class="grid services-grid">
-          <div class="card"> <div class="icon">🤖</div><h4>Artificial Intelligence</h4><p>Custom ML models and production AI systems.</p></div>
-          <div class="card"> <div class="icon">💳</div><h4>FinTech Solutions</h4><p>Payments, lending, and regulatory-ready platforms.</p></div>
-          <div class="card"> <div class="icon">☁️</div><h4>Cloud Infrastructure</h4><p>Scalable cloud architecture and cost optimization.</p></div>
-          <div class="card"> <div class="icon">🧩</div><h4>Software Engineering</h4><p>End-to-end product engineering and integration.</p></div>
-          <div class="card"> <div class="icon">🔐</div><h4>Cybersecurity</h4><p>Security assessments, identity, and encryption.</p></div>
-          <div class="card"> <div class="icon">📊</div><h4>Data Analytics</h4><p>Analytics platforms and real-time insights.</p></div>
-          <div class="card"> <div class="icon">⚙️</div><h4>Intelligent Automation</h4><p>Workflow automation and RPA for efficiency.</p></div>
-          <div class="card"> <div class="icon">⛓️</div><h4>Blockchain Solutions</h4><p>Distributed ledgers and secure tokenization.</p></div>
-          <div class="card"> <div class="icon">🏛️</div><h4>Enterprise Architecture</h4><p>Scalable architectures and governance.</p></div>
-          <div class="card"> <div class="icon">🔄</div><h4>Digital Transformation</h4><p>Modernization strategies and platform migration.</p></div>
+        <div class="section-head reveal">
+          <span class="eyebrow">What we offer</span>
+          <h2>Enterprise-grade services for digital finance and technology transformation.</h2>
+        </div>
+        <div class="services-grid reveal">
+          <article class="card service-card"><div class="icon">🤖</div><h3>Artificial Intelligence</h3><p>Custom AI engines and predictive automation for financial workflows.</p></article>
+          <article class="card service-card"><div class="icon">💳</div><h3>FinTech Solutions</h3><p>Regulatory-ready payments, risk, and lending platforms built for Europe.</p></article>
+          <article class="card service-card"><div class="icon">☁️</div><h3>Cloud Infrastructure</h3><p>Resilient multi-cloud architecture with efficiency and compliance control.</p></article>
+          <article class="card service-card"><div class="icon">🔐</div><h3>Cybersecurity</h3><p>Continuous monitoring, identity, and encryption safeguards for sensitive systems.</p></article>
+          <article class="card service-card"><div class="icon">📊</div><h3>Data Analytics</h3><p>Real-time insights, KPI dashboards and intelligent forecasting.</p></article>
+          <article class="card service-card"><div class="icon">⚙️</div><h3>Automation</h3><p>Smart automation, process orchestration and workflow acceleration.</p></article>
+          <article class="card service-card"><div class="icon">💼</div><h3>Enterprise Architecture</h3><p>Modular systems, governance and platform strategy for scale.</p></article>
+          <article class="card service-card"><div class="icon">🔄</div><h3>Digital Transformation</h3><p>Modernization programs with measurable impact and low disruption.</p></article>
+          <article class="card service-card"><div class="icon">🧩</div><h3>Product Engineering</h3><p>Full-stack delivery from prototypes to mission-critical launches.</p></article>
+          <article class="card service-card"><div class="icon">🌐</div><h3>Global Compliance</h3><p>Privacy-first engineering built around EU standards and trust.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="tech" class="section tech">
+    <section class="section values">
       <div class="container">
-        <h2>Technologies We Use</h2>
-        <div class="tech-grid">
-          <div class="tech-item" title="Python">Python</div>
-          <div class="tech-item" title="JavaScript">JavaScript</div>
-          <div class="tech-item" title="TypeScript">TypeScript</div>
-          <div class="tech-item" title="React">React</div>
-          <div class="tech-item" title="Node.js">Node.js</div>
-          <div class="tech-item" title="Docker">Docker</div>
-          <div class="tech-item" title="Kubernetes">Kubernetes</div>
-          <div class="tech-item" title="AWS">AWS</div>
-          <div class="tech-item" title="Azure">Azure</div>
-          <div class="tech-item" title="GCP">GCP</div>
-          <div class="tech-item" title="TensorFlow">TensorFlow</div>
-          <div class="tech-item" title="PostgreSQL">PostgreSQL</div>
-          <div class="tech-item" title="MongoDB">MongoDB</div>
+        <div class="section-head reveal">
+          <span class="eyebrow">Our values</span>
+          <h2>The principles that shape every AlphaMindPlus partnership.</h2>
+        </div>
+        <div class="values-grid reveal">
+          <div class="value-card">Innovation</div>
+          <div class="value-card">Transparency</div>
+          <div class="value-card">Security</div>
+          <div class="value-card">Collaboration</div>
+          <div class="value-card">Excellence</div>
+          <div class="value-card">Growth</div>
+          <div class="value-card">Diversity</div>
+          <div class="value-card">Future Thinking</div>
         </div>
       </div>
     </section>
 
-    <section id="values" class="section values">
+    <section class="section testimonials">
       <div class="container">
-        <h2>Our Values</h2>
-        <div class="grid values-grid">
-          <div class="value">Innovation</div>
-          <div class="value">Transparency</div>
-          <div class="value">Security</div>
-          <div class="value">Collaboration</div>
-          <div class="value">Excellence</div>
-          <div class="value">Growth</div>
-          <div class="value">Diversity</div>
-          <div class="value">Future Thinking</div>
+        <div class="section-head reveal">
+          <span class="eyebrow">Testimonials</span>
+          <h2>Trusted by founders, product leaders and security teams.</h2>
+        </div>
+        <div class="testimonials-grid reveal">
+          <blockquote class="testimonial"><p>“AlphaMindPlus built a secure payments platform for our fintech — confident, timely, and highly skilled.”</p><cite>— Elena M., Founder</cite></blockquote>
+          <blockquote class="testimonial"><p>“Their AI team delivered actionable models that improved forecasting accuracy by 32%.”</p><cite>— Tomas R., VP Product</cite></blockquote>
+          <blockquote class="testimonial"><p>“Professional, privacy-first approach to cloud transformation.”</p><cite>— Marie L., CTO</cite></blockquote>
         </div>
       </div>
     </section>
 
-    <section id="testimonials" class="section testimonials">
+    <section class="section image-wall">
       <div class="container">
-        <h2>What Partners Say</h2>
-        <div class="grid testimonials-grid">
-          <blockquote class="testimonial">“AlphaMindPlus built a secure payments platform for our fintech — confident, timely, and highly skilled.”<cite>— Elena M., Founder</cite></blockquote>
-          <blockquote class="testimonial">“Their AI team delivered actionable models that improved forecasting accuracy by 32%.”<cite>— Tomas R., VP Product</cite></blockquote>
-          <blockquote class="testimonial">“Professional, privacy-first approach to cloud transformation.”<cite>— Marie L., CTO</cite></blockquote>
+        <div class="section-head reveal">
+          <span class="eyebrow">Creative visuals</span>
+          <h2>All brand imagery from the AlphaMindPlus asset library.</h2>
+        </div>
+        <div class="wall-grid reveal">
+          <img src="/assets/images/image.png" alt="AI fintech dashboard" loading="lazy" />
+          <img src="/assets/images/image1.png" alt="Modern fintech interface" loading="lazy" />
+          <img src="/assets/images/image2.png" alt="Cloud platform experience" loading="lazy" />
+          <img src="/assets/images/image3.png" alt="Finance workflow illustration" loading="lazy" />
+          <img src="/assets/images/image4.png" alt="Data visualization panel" loading="lazy" />
+          <img src="/assets/images/image5.png" alt="Analytics workspace" loading="lazy" />
+          <img src="/assets/images/image6.png" alt="Secure fintech system" loading="lazy" />
+          <img src="/assets/images/image7.png" alt="Technology network" loading="lazy" />
+          <img src="/assets/images/image8.png" alt="AI and finance collaboration" loading="lazy" />
+          <img src="/assets/images/image9.png" alt="Digital product launch" loading="lazy" />
+          <img src="/assets/images/image10.png" alt="Fintech growth dashboard" loading="lazy" />
+          <img src="/assets/images/image11.png" alt="Team collaboration" loading="lazy" />
+          <img src="/assets/images/image12.png" alt="European fintech strategy" loading="lazy" />
+          <img src="/assets/images/image13.png" alt="Future-ready tech platform" loading="lazy" />
         </div>
       </div>
     </section>
 
     <section id="contact" class="section contact">
-      <div class="container contact-inner">
-        <div>
-          <h2>Contact Us</h2>
-          <p>For partnerships, careers, and enterprise inquiries — reach out.</p>
-          <form class="contact-form" onsubmit="return contactMail(event)">
-            <label for="contactEmail">Email
-              <input id="contactEmail" type="email" name="email" placeholder="you@company.com" required />
-            </label>
-            <label for="contactMessage">Message
-              <textarea id="contactMessage" name="message" rows="4" placeholder="Brief message"></textarea>
-            </label>
-            <div class="form-actions"><button class="btn primary" type="submit">Send</button><a class="btn ghost" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn ghost" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></div>
-          </form>
+      <div class="container contact-panel reveal">
+        <div class="contact-copy">
+          <span class="eyebrow">Contact Us</span>
+          <h2>Interested in working with us or joining our team?</h2>
+          <p>Reach out directly via email for enterprise enquiries, partnerships and career opportunities.</p>
+          <div class="contact-card">
+            <div>
+              <p class="contact-label">Email</p>
+              <a class="contact-email" href="mailto:alphamindplus@outlook.com">alphamindplus@outlook.com</a>
+            </div>
+            <button id="copyEmail" class="btn white" type="button" data-email="alphamindplus@outlook.com">Copy email</button>
+          </div>
+          <p class="contact-note">No forms, no delays—just direct access to our team.</p>
+          <div id="copyMessage" class="copy-message" aria-live="polite"></div>
         </div>
-        <div aria-hidden="true">
-          <div class="map-placeholder">Map (optional)</div>
+        <div class="contact-media" aria-hidden="true">
+          <img src="/assets/images/image10.png" alt="Team collaboration visual" loading="lazy" />
         </div>
       </div>
     </section>
@@ -188,12 +198,17 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="foot-brand"><img src="/assets/images/favicon.svg" alt="AlphaMindPlus logo" class="foot-logo"/><div>AlphaMindPlus</div></div>
+      <div class="foot-brand">
+        <img src="/assets/images/logo.png" alt="AlphaMindPlus logo" class="foot-logo" loading="lazy" />
+        <div>
+          <strong>AlphaMindPlus</strong>
+          <p>Enterprise fintech intelligence.</p>
+        </div>
+      </div>
       <nav class="foot-nav" aria-label="Footer navigation">
         <a href="/about.html">About</a>
         <a href="/careers.html">Careers</a>
-        <a href="/index.html#contact">Contact</a>
-        <a href="#">Privacy Policy</a>
+        <a href="#contact">Contact</a>
       </nav>
       <div class="copy">© <span id="year"></span> AlphaMindPlus — All rights reserved.</div>
     </div>

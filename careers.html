@@ -5,49 +5,74 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Careers — AlphaMindPlus</title>
   <meta name="description" content="Careers at AlphaMindPlus — remote internships across Europe." />
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/images/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta name="theme-color" content="#0B1020" />
 </head>
-<body class="dark">
+<body class="theme-dark">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="nav sticky" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a class="brand" href="/index.html">AlphaMindPlus</a>
-      <nav class="nav-links">
+      <a class="brand" href="/index.html">
+        <img src="/assets/images/logo.png" alt="AlphaMindPlus logo" class="brand-logo" loading="lazy" />
+        <span class="brand-text">AlphaMindPlus</span>
+      </a>
+      <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
         <a href="/index.html">Home</a>
         <a href="/about.html">About</a>
       </nav>
-      <div class="nav-ctas"><a class="btn ghost" href="#openings">Openings</a></div>
-      <button id="mobileToggle" class="mobile-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" type="button">Light mode</button>
+        <a class="btn ghost" href="#openings">Openings</a>
+      </div>
+      <button id="mobileToggle" class="mobile-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open menu" type="button">☰</button>
     </div>
   </header>
 
   <main id="main-content">
     <section class="section careers-hero">
-      <div class="container">
-        <h1>We're hiring — Remote Interns Across Europe</h1>
-        <p>Join AlphaMindPlus and build industry-grade fintech and AI solutions.</p>
-        <div class="careers-actions"><input id="jobSearch" aria-label="Search jobs" placeholder="Search jobs or keywords"/><select id="deptFilter" aria-label="Filter by department"><option value="all">All Departments</option></select><button id="clearFilters" class="btn ghost">Clear</button></div>
+      <div class="container careers-hero-inner reveal">
+        <div class="hero-copy">
+          <span class="eyebrow">Careers</span>
+          <h1>We're hiring — remote interns across Europe.</h1>
+          <p>Join AlphaMindPlus to build enterprise-grade fintech systems, AI applications and secure cloud platforms.</p>
+        </div>
+        <div class="hero-media"><img src="/assets/images/image12.png" alt="Career growth in fintech" loading="lazy" /></div>
       </div>
     </section>
 
-    <section id="openings" class="section container">
-      <h2>Open Positions</h2>
-      <div id="jobsList" class="jobs-grid" aria-live="polite"></div>
+    <section id="openings" class="section openings">
+      <div class="container reveal">
+        <div class="section-head">
+          <h2>Open Positions</h2>
+          <p>Search by career path or team to find the internship that matches your ambition.</p>
+        </div>
+        <div class="careers-actions">
+          <input id="jobSearch" aria-label="Search jobs" placeholder="Search by role or skill" />
+          <select id="deptFilter" aria-label="Filter by department"><option value="all">All Departments</option></select>
+          <button id="clearFilters" class="btn ghost" type="button">Clear</button>
+        </div>
+        <div id="jobsList" class="jobs-grid" aria-live="polite"></div>
+      </div>
     </section>
 
-    <section class="section container perks">
-      <h2>Internship Benefits</h2>
-      <ul>
-        <li>Mentorship from senior engineers</li>
-        <li>Remote-first flexible hours</li>
-        <li>Learning budget and certifications</li>
-      </ul>
+    <section class="section perks reveal">
+      <div class="container perks-grid">
+        <div class="perk-card"><h3>Mentorship</h3><p>Work directly with senior engineers and product leaders.</p></div>
+        <div class="perk-card"><h3>Flexible hours</h3><p>Remote-first schedule designed for productivity and balance.</p></div>
+        <div class="perk-card"><h3>Learning support</h3><p>Access learning budgets, certifications and technical coaching.</p></div>
+      </div>
     </section>
   </main>
 
-  <footer class="footer container">
-    <div>© <span id="year3"></span> AlphaMindPlus</div>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="foot-brand">
+        <img src="/assets/images/logo.png" alt="AlphaMindPlus logo" class="foot-logo" loading="lazy" />
+        <div><strong>AlphaMindPlus</strong></div>
+      </div>
+      <div class="copy">© <span id="year3"></span> AlphaMindPlus</div>
+    </div>
   </footer>
 
   <script src="/assets/js/jobs.js" defer></script>

@@ -5,38 +5,88 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — AlphaMindPlus</title>
   <meta name="description" content="About AlphaMindPlus — mission, vision and values." />
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/images/logo.png" type="image/png" />
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta name="theme-color" content="#0B1020" />
 </head>
-<body class="dark">
+<body class="theme-dark">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="nav sticky" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a class="brand" href="/index.html">AlphaMindPlus</a>
-      <nav class="nav-links">
+      <a class="brand" href="/index.html">
+        <img src="/assets/images/logo.png" alt="AlphaMindPlus logo" class="brand-logo" loading="lazy" />
+        <span class="brand-text">AlphaMindPlus</span>
+      </a>
+      <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
         <a href="/index.html">Home</a>
         <a href="/index.html#services">Services</a>
         <a href="/careers.html">Careers</a>
       </nav>
-      <div class="nav-ctas"><a class="btn primary" href="/careers.html">Join Our Team</a></div>
-      <button id="mobileToggle" class="mobile-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" type="button">Light mode</button>
+        <a class="btn primary" href="/careers.html">Join Our Team</a>
+      </div>
+      <button id="mobileToggle" class="mobile-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open menu" type="button">☰</button>
     </div>
   </header>
+
   <main id="main-content">
-    <section class="section container">
-      <h1>About AlphaMindPlus</h1>
-      <p>AlphaMindPlus combines deep technical expertise with financial domain knowledge to deliver secure, reliable and innovative fintech products across Europe.</p>
-      <h2>Mission</h2>
-      <p>Deliver intelligent, secure and scalable solutions that help organisations modernize and grow.</p>
-      <h2>Security & Compliance</h2>
-      <p>We follow strict security practices, encryption defaults and privacy-by-design principles.</p>
-      <h2>Leadership</h2>
-      <p>Experienced engineers, product leaders and security professionals from top EU tech firms.</p>
+    <section class="section hero-compact">
+      <div class="container hero-compact-inner reveal">
+        <div class="hero-copy">
+          <span class="eyebrow">About AlphaMindPlus</span>
+          <h1>Premium fintech engineering, compliance and AI at European scale.</h1>
+          <p>AlphaMindPlus combines deep technical expertise with financial domain knowledge to deliver secure, reliable and innovative digital products across Europe.</p>
+          <a class="btn primary" href="/careers.html">Explore Careers</a>
+        </div>
+        <div class="hero-image"><img src="/assets/images/image11.png" alt="Team collaborating on fintech solutions" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <section class="section about-split">
+      <div class="container about-split-inner reveal">
+        <div>
+          <h2>Our mission</h2>
+          <p>Deliver intelligent, secure and scalable solutions that help organisations modernize and grow.</p>
+          <h3>Security & Compliance</h3>
+          <p>We follow strict security practices, encryption defaults and privacy-by-design principles for every engagement.</p>
+        </div>
+        <div>
+          <h2>Leadership</h2>
+          <p>Experienced engineers, product leaders and security professionals from top EU technology firms bring trusted execution and industry insight.</p>
+          <div class="stats-grid two">
+            <div class="stat-card"><strong>100%</strong><span>Data confidentiality</span></div>
+            <div class="stat-card"><strong>24/7</strong><span>Operational monitoring</span></div>
+            <div class="stat-card"><strong>EU</strong><span>Compliance-first delivery</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section culture-block">
+      <div class="container reveal">
+        <h2>Built for modern European finance</h2>
+        <div class="culture-grid">
+          <div class="culture-card"><h3>Domain expertise</h3><p>Fintech native engineering and financial product design.</p></div>
+          <div class="culture-card"><h3>Trusted systems</h3><p>Secure platforms that support sensitive customer and payment data.</p></div>
+          <div class="culture-card"><h3>Fast execution</h3><p>Lean delivery with strategic roadmaps and product velocity.</p></div>
+        </div>
+      </div>
     </section>
   </main>
-  <footer class="footer container">
-    <div>© <span id="year2"></span> AlphaMindPlus</div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="foot-brand">
+        <img src="/assets/images/logo.png" alt="AlphaMindPlus logo" class="foot-logo" loading="lazy" />
+        <div>
+          <strong>AlphaMindPlus</strong>
+        </div>
+      </div>
+      <div class="copy">© <span id="year2"></span> AlphaMindPlus</div>
+    </div>
   </footer>
+
   <script type="module" src="/assets/js/main.js" defer></script>
 </body>
 </html>

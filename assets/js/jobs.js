@@ -12,15 +12,70 @@ const JOBS = [
   {id:10,title:'Enterprise Architecture Intern',dept:'Architecture',loc:'Remote - Europe',type:'Internship',desc:'Assist in designing scalable architectures.',req:['system thinking','cloud basics','documentation']}
 ];
 
-function renderJobs(list){const container=document.getElementById('jobsList');if(!container)return;container.innerHTML='';list.forEach(j=>{const el=document.createElement('article');el.className='job-card';el.innerHTML=`<h3>${j.title}</h3><div class="badge">${j.dept}</div><p class="muted">${j.loc} • ${j.type}</p><p>${j.desc}</p><p><strong>Requirements:</strong> ${j.req.join(', ')}</p><div style="margin-top:10px"><a class="btn primary" href="mailto:jobs@alphamindplus.com?subject=Application: ${encodeURIComponent(j.title)}">Apply Now</a></div>`;container.appendChild(el)});
+function renderJobs(list) {
+  const container = document.getElementById('jobsList');
+  if (!container) return;
+  container.innerHTML = '';
+  list.forEach((job) => {
+    const card = document.createElement('article');
+    card.className = 'job-card';
+    card.innerHTML = `
+      <div class="job-header">
+        <h3>${job.title}</h3>
+        <span class="badge">${job.dept}</span>
+      </div>
+      <p class="muted">${job.loc} • ${job.type}</p>
+      <p>${job.desc}</p>
+      <p><strong>Requirements:</strong> ${job.req.join(', ')}</p>
+      <div class="job-actions"><a class="btn primary" href="mailto:alphamindplus@outlook.com?subject=Application: ${encodeURIComponent(job.title)}">Apply Now</a></div>
+    `;
+    container.appendChild(card);
+  });
 }
 
-function populateFilters(){const sel=document.getElementById('deptFilter');if(!sel)return;const depts=['All'];JOBS.forEach(j=>{if(!depts.includes(j.dept))depts.push(j.dept)});depts.forEach(d=>{const o=document.createElement('option');o.value=d.toLowerCase();o.textContent=d;o.selected=false;sel.appendChild(o)});
+function populateFilters() {
+  const select = document.getElementById('deptFilter');
+  if (!select) return;
+  const departments = ['All'];
+  JOBS.forEach((job) => {
+    if (!departments.includes(job.dept)) departments.push(job.dept);
+  });
+  departments.forEach((dept) => {
+    const option = document.createElement('option');
+    option.value = dept.toLowerCase();
+    option.textContent = dept;
+    select.appendChild(option);
+  });
 }
 
-document.addEventListener('DOMContentLoaded',()=>{
-  renderJobs(JOBS);populateFilters();
-  const search=document.getElementById('jobSearch');const filter=document.getElementById('deptFilter');const clear=document.getElementById('clearFilters');
-  function apply(){let res=JOBS.slice();const q=search.value.trim().toLowerCase();if(filter && filter.value && filter.value!=='all'){res=res.filter(j=>j.dept.toLowerCase()===filter.value)}if(q){res=res.filter(j=> (j.title+j.dept+j.desc+ j.req.join(' ')).toLowerCase().includes(q))}renderJobs(res)}
-  if(search)search.addEventListener('input',apply);if(filter)filter.addEventListener('change',apply);if(clear)clear.addEventListener('click',()=>{if(search)search.value='';if(filter)filter.value='all';apply()});
+function filterJobs() {
+  const search = document.getElementById('jobSearch');
+  const select = document.getElementById('deptFilter');
+  let filtered = [...JOBS];
+  const query = search?.value.trim().toLowerCase() || '';
+  const department = select?.value || 'all';
+  if (department && department !== 'all') {
+    filtered = filtered.filter((job) => job.dept.toLowerCase() === department);
+  }
+  if (query) {
+    filtered = filtered.filter((job) => (`${job.title} ${job.dept} ${job.desc} ${job.req.join(' ')}`.toLowerCase().includes(query)));
+  }
+  renderJobs(filtered);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderJobs(JOBS);
+  populateFilters();
+
+  const search = document.getElementById('jobSearch');
+  const select = document.getElementById('deptFilter');
+  const clear = document.getElementById('clearFilters');
+
+  search?.addEventListener('input', filterJobs);
+  select?.addEventListener('change', filterJobs);
+  clear?.addEventListener('click', () => {
+    if (search) search.value = '';
+    if (select) select.value = 'all';
+    filterJobs();
+  });
 });

@@ -1,0 +1,63 @@
+:root{
+  --bg:#071027;--panel:rgba(255,255,255,0.03);--muted:#9fb0c8;--accent1:#4cc6ff;--accent2:#9b5cff;--glass:rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+body{background:linear-gradient(180deg,#020612 0%,#071027 60%);color:#e6f2ff;line-height:1.5;-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.nav{backdrop-filter:blur(6px);background:linear-gradient(180deg,rgba(11,16,32,0.6),rgba(11,16,32,0.4));}
+.nav-inner{display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.logo{width:44px;height:44px}
+.nav-links{display:flex;gap:14px;margin-left:20px}
+.nav-links a{color:var(--muted);text-decoration:none}
+.nav-ctas{margin-left:auto;display:flex;gap:10px}
+.btn{padding:8px 14px;border-radius:10px;text-decoration:none;color:var(--muted);border:1px solid transparent}
+.btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#061027;font-weight:600}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.mobile-toggle{display:none}
+.sticky{position:sticky;top:0;z-index:60}
+.hero{position:relative;padding:80px 0;overflow:hidden}
+.hero-inner{display:flex;align-items:center;gap:40px}
+.hero-content{flex:1}
+.hero-slogan{font-size:34px;margin:0 0 12px}
+.hero-lead{color:var(--muted);max-width:52ch}
+.hero-visual{width:420px}
+.hero-illustration{width:100%;height:auto;border-radius:12px;box-shadow:0 6px 30px rgba(155,92,255,0.12);}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:20px;border-radius:12px;border:1px solid var(--glass);transition:transform .28s,box-shadow .28s}
+.card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+.icon{font-size:28px;margin-bottom:8px}
+.tech-grid,.values-grid{display:flex;flex-wrap:wrap;gap:10px}
+.tech-item{background:rgba(255,255,255,0.03);padding:10px 14px;border-radius:10px;color:var(--muted)}
+.values-grid .value{min-width:140px;padding:12px;border-radius:12px;background:linear-gradient(90deg,rgba(76,198,255,0.06),rgba(155,92,255,0.04));text-align:center}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.testimonial{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:20px;border-radius:12px}
+.contact-form{display:flex;flex-direction:column;gap:8px;max-width:420px}
+.contact-form input,.contact-form textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+.form-actions{display:flex;gap:8px;align-items:center}
+.footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.foot-logo{width:36px;height:36px}
+.jobs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.job-card{padding:16px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03)}
+.job-card h3{margin:0 0 6px}
+.badge{display:inline-block;background:rgba(76,198,255,0.08);padding:6px 8px;border-radius:8px;color:var(--accent1);font-weight:600}
+.careers-actions{display:flex;gap:8px;align-items:center;margin-top:12px}
+.map-placeholder{height:200px;background:linear-gradient(90deg,rgba(76,198,255,0.02),rgba(155,92,255,0.02));border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.loader{position:fixed;inset:0;background:linear-gradient(180deg,rgba(7,16,39,0.6),rgba(0,0,0,0.6));z-index:200;display:flex;align-items:center;justify-content:center;color:var(--accent1);font-size:18px}
+.particles{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+
+/* Accessibility and responsive fixes */
+.skip-link{position:absolute;left:12px;top:12px;background:#061027;color:var(--accent1);padding:8px 12px;border-radius:8px;z-index:300;transform:translateY(-120%);transition:transform .18s}
+.skip-link:focus{transform:translateY(0);outline:3px solid rgba(76,198,255,0.25)}
+
+a:focus,button:focus,.btn:focus{outline:3px solid rgba(76,198,255,0.12);outline-offset:2px}
+
+/* Mobile menu */
+@media (max-width:900px){
+  .hero-inner{flex-direction:column}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:linear-gradient(180deg,rgba(7,16,39,0.95),rgba(7,16,39,0.98));flex-direction:column;padding:12px;gap:12px}
+  .nav.open .nav-links{display:flex}
+  .mobile-toggle{display:inline-block;margin-left:auto;background:transparent;border:0;color:var(--muted);font-size:20px}
+}

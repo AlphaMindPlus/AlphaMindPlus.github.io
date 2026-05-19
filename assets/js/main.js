@@ -1,44 +1,5 @@
 import './jobs.js';
 
-const THEME_STORAGE_KEY = 'alphamindplus-theme';
-const themeToggle = document.getElementById('themeToggle');
-const body = document.body;
-
-const applyTheme = (theme) => {
-  body.classList.toggle('theme-light', theme === 'light');
-  body.classList.toggle('theme-dark', theme === 'dark');
-  if (themeToggle) {
-    themeToggle.textContent = theme === 'light' ? 'Dark mode' : 'Light mode';
-    themeToggle.setAttribute('aria-label', `Switch to ${theme === 'light' ? 'dark' : 'light'} mode`);
-  }
-};
-
-const getPreferredTheme = () => {
-  const stored = localStorage.getItem(THEME_STORAGE_KEY);
-  if (stored === 'light' || stored === 'dark') return stored;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-};
-
-const initTheme = () => {
-  applyTheme(getPreferredTheme());
-};
-
-const toggleTheme = () => {
-  const nextTheme = body.classList.contains('theme-light') ? 'dark' : 'light';
-  applyTheme(nextTheme);
-  localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
-};
-
-const setupThemeToggle = () => {
-  if (!themeToggle) return;
-  themeToggle.addEventListener('click', toggleTheme);
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-    if (!localStorage.getItem(THEME_STORAGE_KEY)) {
-      applyTheme(event.matches ? 'dark' : 'light');
-    }
-  });
-};
-
 const setupMobileMenu = () => {
   const mtButtons = document.querySelectorAll('#mobileToggle');
   mtButtons.forEach((mt) => {
@@ -172,8 +133,6 @@ const setYear = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
-  setupThemeToggle();
   setupMobileMenu();
   initLoader();
   setYear();

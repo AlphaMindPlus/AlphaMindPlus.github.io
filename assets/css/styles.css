@@ -1,29 +1,9 @@
-
 :root {
-  color-scheme: dark;
-  --bg: #0B1020;
-  --surface: rgba(255,255,255,0.04);
-  --surface-strong: rgba(10,16,40,0.95);
-  --panel: rgba(255,255,255,0.06);
-  --text: #F8FBFF;
-  --muted: #B5C7DF;
-  --muted-strong: #A1B0C7;
-  --border: rgba(255,255,255,0.12);
-  --accent: #00D4FF;
-  --accent-strong: #6D5EF5;
-  --accent-soft: rgba(109,94,245,0.22);
-  --shadow: 0 30px 70px rgba(1,8,24,0.38);
-  --radius: 24px;
-  --max-width: 1180px;
-  --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
-
-body.theme-light {
   color-scheme: light;
-  --bg: #FFFFFF;
-  --surface: rgba(255,255,255,0.86);
-  --surface-strong: rgba(255,255,255,0.98);
-  --panel: rgba(241,247,255,0.74);
+  --bg: #F5F7FA;
+  --surface: #FFFFFF;
+  --surface-strong: #F8FAFF;
+  --panel: #F4F7FF;
   --text: #111827;
   --muted: #475569;
   --muted-strong: #334155;
@@ -31,7 +11,10 @@ body.theme-light {
   --accent: #2563EB;
   --accent-strong: #7C3AED;
   --accent-soft: rgba(37,99,235,0.12);
-  --shadow: 0 24px 48px rgba(15,23,42,0.09);
+  --shadow: 0 24px 48px rgba(15,23,42,0.08);
+  --radius: 24px;
+  --max-width: 1180px;
+  --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 * {
@@ -46,7 +29,7 @@ body {
   margin: 0;
   min-height: 100%;
   font-family: var(--font);
-  background: linear-gradient(180deg, #071127 0%, var(--bg) 36%, var(--bg) 100%);
+  background: linear-gradient(180deg, #F9FBFF 0%, var(--bg) 30%, var(--bg) 100%);
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -75,13 +58,8 @@ a {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(18px);
-  background: rgba(11,16,32,0.64);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-
-body.theme-light .nav {
-  background: rgba(255,255,255,0.88);
-  border-color: rgba(15,23,42,0.08);
+  background: rgba(255,255,255,0.94);
+  border-bottom: 1px solid var(--border);
 }
 
 .nav-inner {
@@ -119,15 +97,10 @@ body.theme-light .nav {
 
 .nav-links a,
 .foot-nav a {
-  color: var(--text);
+  color: var(--muted-strong);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.25s ease;
-}
-
-body.theme-light .nav-links a,
-body.theme-light .foot-nav a {
-  color: var(--muted-strong);
 }
 
 .nav-links a:hover,
@@ -142,7 +115,6 @@ body.theme-light .foot-nav a {
   gap: 12px;
 }
 
-.theme-toggle,
 .btn {
   border: 1px solid transparent;
   border-radius: 999px;
@@ -151,18 +123,6 @@ body.theme-light .foot-nav a {
   transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-.theme-toggle {
-  background: rgba(255,255,255,0.08);
-  color: var(--text);
-  border-color: rgba(255,255,255,0.16);
-}
-
-body.theme-light .theme-toggle {
-  background: rgba(37,99,235,0.08);
-  color: var(--muted-strong);
-}
-
-.theme-toggle:hover,
 .btn:hover {
   transform: translateY(-1px);
 }
@@ -174,32 +134,28 @@ body.theme-light .theme-toggle {
   gap: 10px;
   text-decoration: none;
   color: var(--text);
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.12);
+  background: #FFFFFF;
+  border-color: var(--border);
+  box-shadow: 0 18px 40px rgba(15,23,42,0.05);
 }
 
 .btn.primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  color: #061027;
+  color: #FFFFFF;
   font-weight: 700;
-  box-shadow: 0 18px 50px rgba(0,212,255,0.18);
+  box-shadow: 0 18px 40px rgba(37,99,235,0.18);
 }
 
 .btn.ghost {
   background: transparent;
-  border-color: rgba(255,255,255,0.16);
-  color: var(--text);
+  border-color: var(--border);
+  color: var(--muted-strong);
 }
 
 .btn.white {
-  background: rgba(255,255,255,0.95);
+  background: #FFFFFF;
   color: #111827;
-  border-color: rgba(15,23,42,0.08);
-}
-
-body.theme-light .btn.ghost {
-  background: transparent;
-  color: var(--muted-strong);
+  border-color: var(--border);
 }
 
 .hero {
@@ -211,7 +167,7 @@ body.theme-light .btn.ghost {
 .hero-backdrop {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(180deg, rgba(6,10,22,0.88), rgba(11,16,32,0.65) 32%, rgba(11,16,32,0.9));
+  background-image: linear-gradient(180deg, #F8FBFF 0%, #FFFFFF 34%, #F5F7FA 100%);
 }
 
 .hero-glow {
@@ -220,7 +176,7 @@ body.theme-light .btn.ghost {
   right: -10%;
   width: 420px;
   height: 420px;
-  background: radial-gradient(circle, rgba(0,212,255,0.24) 0%, transparent 55%);
+  background: radial-gradient(circle, rgba(37,99,235,0.16) 0%, transparent 55%);
   filter: blur(56px);
   pointer-events: none;
 }
@@ -280,9 +236,9 @@ body.theme-light .btn.ghost {
   display: inline-flex;
   padding: 14px 18px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.06);
-  color: var(--text);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(37,99,235,0.08);
+  color: #1E3A8A;
+  border: 1px solid rgba(37,99,235,0.16);
 }
 
 .hero-visual {
@@ -296,9 +252,10 @@ body.theme-light .btn.ghost {
   position: relative;
   overflow: hidden;
   border-radius: 32px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid var(--border);
   box-shadow: var(--shadow);
   min-height: 460px;
+  background: #FFFFFF;
 }
 
 .hero-panel img {
@@ -312,10 +269,10 @@ body.theme-light .btn.ghost {
   position: absolute;
   left: 24px;
   bottom: 24px;
-  background: rgba(5,11,26,0.76);
+  background: rgba(255,255,255,0.96);
   padding: 18px 20px;
   border-radius: 18px;
-  backdrop-filter: blur(18px);
+  border: 1px solid rgba(15,23,42,0.08);
   max-width: 72%;
 }
 
@@ -324,8 +281,8 @@ body.theme-light .btn.ghost {
   margin-bottom: 10px;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(0,212,255,0.12);
-  color: #E5F9FF;
+  background: rgba(37,99,235,0.12);
+  color: #2563EB;
   font-size: 0.9rem;
 }
 
@@ -753,8 +710,8 @@ body.theme-light .btn.ghost {
     top: 76px;
     left: 0;
     right: 0;
-    background: rgba(11,16,32,0.96);
-    border-top: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.96);
+    border-top: 1px solid var(--border);
     flex-direction: column;
     padding: 18px 24px;
   }
@@ -798,8 +755,7 @@ body.theme-light .btn.ghost {
     padding: 60px 0;
   }
 
-  .btn,
-  .theme-toggle {
+  .btn {
     width: 100%;
     justify-content: center;
   }
